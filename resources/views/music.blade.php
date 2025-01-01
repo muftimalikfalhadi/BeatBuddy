@@ -114,7 +114,7 @@
   <div class="container">
    <div class="header">
     <div class="logo">
-     <img alt="Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xNdfoCijmjxWOS1ATHSfgUtjYaefJILpejK5jaep4tJChR1fJA.jpg" width="100"/>
+     <img alt="Logo" height="50" src="https://drive.cimahikota.go.id/s/S55zfPXtcPmiB6X/download" width="150"/>
      <div class="logo-text">
       BeatBuddy
      </div>
@@ -167,19 +167,19 @@
         ?>
      @foreach ($array_lagu as $key => $value)
       <tr data-id="{{ $value['id_lagu'] }}">
-        <?php //$i++;
+        <?php $i++;
 
         ?>
        <td>
-        <?php //echo ($i);
-        echo $value['id_lagu'];?>
+        <?php echo ($i);
+        ?>
        </td>
        <td>
-        <!-- <img alt="Song Image" height="40" src="https://storage.googleapis.com/a1aa/image/XWdz8RbvRdqGEpZ6TlJpb593eKDUifrJzlWff0ihPX4JYU9PB.jpg" width="40"/> -->
+        <!-- <img alt="Song Image" height="40" src="https://drive.cimahikota.go.id/s/5DHtSAdJ353XQgP/download" width="40"/> -->
         <img alt="Song Image" height="40" src="{{$value['img']}}" width="40"/>
        </td>
        <td>
-        <a href="/player" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
+        <a href="#" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
        </td>
        <td>
         <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a>

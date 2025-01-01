@@ -44,7 +44,7 @@
         }
 
         .logo img {
-            width: 50px;
+            width: 150px;
             margin-right: 10px;
         }
 
@@ -117,7 +117,7 @@
             width: 100%;
             height: 300px;
             border-radius: 10px;
-            background: url('https://storage.googleapis.com/a1aa/image/xbfeXnCp13veIoaN4ceb7Ze25GRiicFtfEW8102wephLuB3fTA.jpg') no-repeat center center;
+            background: url('https://drive.cimahikota.go.id/s/5DHtSAdJ353XQgP/download') no-repeat center center;
             background-size: cover;
             position: relative;
             transition: transform 0.3s ease;
@@ -354,12 +354,12 @@
     <div class="container">
         <header class="header">
             <div class="logo">
-                <img src="https://storage.googleapis.com/a1aa/image/zQ0d21WZYjrDIx3mTolRDeefRqrr0dehvTcEYs7rrfrvaw9fE.jpg" alt="BeatBuddy Logo" width="50" height="50">
-                <h1>BeatBuddy</h1>
+                <img src="https://drive.cimahikota.go.id/s/S55zfPXtcPmiB6X/download" alt="BeatBuddy Logo" width="50" height="50">
+                <h2>BeatBuddy</h2>
             </div>
             <nav class="nav">
                 <a href="/">Home</a>
-                <a href="/nextup">Next Up</a>
+                <!-- <a href="/nextup">Next Up</a> -->
                 <a href="/music">Music</a>
             </nav>
         </header>
@@ -464,7 +464,7 @@
             
             <div class="albums">
                 @foreach ($data['artis'] as $key => $value)
-                    <a href="#" class="album">
+                    <a href="/list/{{$value['id_artis']}}" class="album">
                     <!-- <img src="https://storage.googleapis.com/a1aa/image/Esv8crHmjE5sAJmdmWfpIU6l2tifhKC4fjtVRXNkVSUxGcfPB.jpg" alt="Adele 21 Album Cover"> -->
                     <img src={{$value['img']}} alt="Adele 21 Album Cover">
                     

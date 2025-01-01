@@ -14,6 +14,7 @@ use App\Http\Controllers\PlayerController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/nextup', [NextUpController::class, 'index'])->name('nextup');
 Route::get('/show', [NextUpController::class, 'show'])->name('nextup');
+Route::get('/list/{id}', [NextUpController::class, 'list'])->name('nextup');
 Route::get('/music', [MusicController::class, 'index'])->name('music');
 Route::get('/player', [PlayerController::class, 'index'])->name('player');
 

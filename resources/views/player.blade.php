@@ -165,7 +165,7 @@
   <div class="navbar">
     <div class="top-section">
       <div class="logo-section">
-        <img alt="BeatBuddy Logo" height="50" src="https://storage.googleapis.com/a1aa/image/isfdDZceChrifJl142gIfuwAxb6Cnxfp0uBUxbJV0UhqWTEgC.jpg" width="100"/>
+        <img alt="BeatBuddy Logo" height="50" src="https://drive.cimahikota.go.id/s/S55zfPXtcPmiB6X/download" width="100"/>
         <div class="logo-text">BeatBuddy</div>
       </div>
       <div class="nav-links">
@@ -178,6 +178,10 @@
       <i class="fas fa-search"></i>
       <input placeholder="Search For Musics, Artists, ..." type="text"/>
     </div>
+    <!-- <div class="nav-links">
+      <input type="button" onclick="fifo()" value="FIFO">
+      <input type="button" onclick="lifo()" value="LIFO">
+    </div> -->
   </div>
 
   <!-- Audio element -->
@@ -201,6 +205,8 @@
       <i class="fas fa-step-backward" id="prev"></i>
       <i class="fas fa-play" id="playPause"></i>
       <i class="fas fa-step-forward" id="next"></i>
+      <i class="fas fa-arrow-right" id="forward"></i>
+      <i class="fas fa-arrow-left" id="reverse"></i>
       <i class="fas fa-random" id="shuffle"></i>
       <i class="fas fa-plus" id="add"></i>
     </div>
@@ -211,13 +217,32 @@
 
   <script>
     // Playlist array
-    const playlist = {!! json_encode($formattedPlaylist) !!}
+    var playlist = {!! json_encode($formattedPlaylist) !!}
+    var originalPlaylist = [...playlist]
 
-    // const playlist = [
+    // playlist.sort((a, b) => {
+    //   if (a.title < b.title) return 1;
+    //   if (a.title > b.title) return -1;
+    //   return 0;
+    // });
+
+    // var playlist = [
     //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', title: 'Circles', artist: 'Post Malone', cover: 'https://storage.googleapis.com/a1aa/image/7MKrezHNp2WTZKyQAhzuj1iEJFMF2myLYPgNe1opOHM3aiAUA.jpg' },
     //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', title: 'Blinding Lights', artist: 'The Weeknd', cover: 'https://via.placeholder.com/350x350' },
     //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', title: 'Levitating', artist: 'Dua Lipa', cover: 'https://via.placeholder.com/350x350' },
     // ];
+
+    // function lifo() {
+    //   console.log(playlist)
+
+    //   playlist.sort((a, b) => {
+    //     if (a.title < b.title) return 1;
+    //     if (a.title > b.title) return -1;
+    //     return 0;
+    //   });
+
+    //   console.log(playlist)
+    // }
 
     let currentTrackIndex = 0;
     let isShuffling = false;
@@ -236,6 +261,8 @@
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
     const shuffleBtn = document.getElementById('shuffle');
+    const reverseBtn = document.getElementById('reverse');
+    const forwardBtn = document.getElementById('forward');
 
     function loadTrack(trackIndex) {
       const track = playlist[trackIndex];
@@ -300,6 +327,20 @@
     prevBtn.addEventListener('click', prevTrack);
     shuffleBtn.addEventListener('click', toggleShuffle);
     repeatBtn.addEventListener('click', toggleRepeat);
+    reverseBtn.addEventListener('click', function() {
+      playlist.sort((a, b) => {
+        if (a.title < b.title) return 1;
+        if (a.title > b.title) return -1;
+        return 0;
+      });
+
+      loadTrack(currentTrackIndex);
+    });
+
+    forwardBtn.addEventListener('click', function() {
+      playlist = [...originalPlaylist]
+      loadTrack(currentTrackIndex);
+    });
 
     audioPlayer.addEventListener('timeupdate', updateProgress);
     audioPlayer.addEventListener('ended', () => {
@@ -323,6 +364,14 @@
     });
 
     loadTrack(currentTrackIndex); // Load first track
+
+    function lifo() {
+      playlist.sort((a, b) => {
+        if (a.title < b.title) return 1;
+        if (a.title > b.title) return -1;
+        return 0;
+      });
+    }
   </script>
 </body>
 </html>

@@ -166,16 +166,17 @@
      </thead>
      <tbody>
         <?php
-            $array_lagu = $data['lagu'];
+            //$array_lagu = $data['lagu'];
             //shuffle($array_lagu);
-            $i=0;
+           // array_slice($array_lagu,
+            //shuffle ($array_lagu);
+                    //$array_lagu = array_slice($array_lagu, 0, 6);
 
+            //dd($lagu);
+            $i=0;
         ?>
-        @if ($array_lagu)
-            @foreach ($array_lagu as $key => $value)
-            @foreach ($playlist as $p)
-            @if ($p == $value['id_lagu'])
-      <tr>
+     @foreach ($lagu as $key => $value)
+     <tr>
         <?php $i++;?>
        <td>
         <?php echo ($i.'-'.$value['id_lagu']);?>
@@ -201,10 +202,6 @@
         <i class="fas fa-ellipsis-h"></i>
        </td>
       </tr>
-
-      @endif
       @endforeach
-      @endforeach
-      @endif
-
+      
         <img alt="Song Image" height="
