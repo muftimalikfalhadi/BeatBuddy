@@ -141,7 +141,7 @@
    </div>
    <div class="playlist">
     <h2>
-     All Music
+     Next Up
     </h2>
     <table>
      <thead>
