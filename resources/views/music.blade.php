@@ -109,14 +109,6 @@
             }
         }
   </style>
-  <script>
-    // var daftar_lagu = document.getElementById(daftar_lagu);
-    var arr_lagu;
-   function toggleLike(element,table) {
-            element.classList.toggle('liked');
-           // console.log(daftar_lagu);
-        }
-  </script>
  </head>
  <body>
   <div class="container">
@@ -131,7 +123,7 @@
      <a href="/">
       Home
      </a>
-     <a href="/show">
+     <a id="show_url" href="/show">
       Next Up
      </a>
      <a href="/music">
@@ -174,9 +166,9 @@
             $i=0;
         ?>
      @foreach ($array_lagu as $key => $value)
-      <tr>
+      <tr data-id="{{ $value['id_lagu'] }}">
         <?php //$i++;
-        
+
         ?>
        <td>
         <?php //echo ($i);
@@ -193,7 +185,7 @@
         <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a>
        </td>
        <td>
-        <svg class="love-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="toggleLike(this,document.getElementById('daftar_lagu'))">
+        <svg class="love-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="toggleLike(this)"  data-id="{{ $value['id_lagu'] }}">
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
         </svg>
         {{$value['time']}}
@@ -203,5 +195,49 @@
        </td>
       </tr>
       @endforeach
-      
-        <img alt="Song Image" height="
+    </tbody>
+    </table>
+    </div>
+    <script>
+    // var daftar_lagu = document.getElementById(daftar_lagu);
+    var arr_lagu;
+    var showUrl = document.getElementById("show_url");
+
+   function toggleLike(element) {
+        element.classList.toggle('liked');
+
+        var currentHref = showUrl.href;
+
+        const songId = element.getAttribute('data-id');
+
+        // Append or modify the query parameter
+        var url = new URL(currentHref); // Use the URL constructor for easier manipulation
+
+        // Get the current songs parameter
+        var currentSongs = url.searchParams.get('songs') || ''; // Get current songs or initialize as an empty string
+
+        // Split the current songs into an array
+        var songList = currentSongs ? currentSongs.split(',') : [];
+
+        // Add or remove the song ID from the list based on its presence
+        if (songList.includes(songId)) {
+            // If the song ID is already in the list, remove it
+            songList = songList.filter(id => id !== songId);
+        } else {
+            // Otherwise, add the song ID to the list
+            songList.push(songId);
+        }
+
+        // Update the songs parameter with the updated list
+        url.searchParams.set('songs', songList.join(','));
+
+        // Update the href of the anchor element
+        showUrl.href = url.toString();
+
+        // Log the updated URL for debugging
+        console.log("Updated URL:", showUrl.href);
+    }
+  </script>
+    </body>
+        <!-- <img alt="Song Image" height=""> -->
+         </html>

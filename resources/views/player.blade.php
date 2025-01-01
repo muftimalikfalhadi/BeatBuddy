@@ -205,18 +205,19 @@
       <i class="fas fa-plus" id="add"></i>
     </div>
   </div>
-
   <div class="keluar">
     <!-- <a href="#">keluar</a> -->
   </div>
 
   <script>
     // Playlist array
-    const playlist = [
-      { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', title: 'Circles', artist: 'Post Malone', cover: 'https://storage.googleapis.com/a1aa/image/7MKrezHNp2WTZKyQAhzuj1iEJFMF2myLYPgNe1opOHM3aiAUA.jpg' },
-      { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', title: 'Blinding Lights', artist: 'The Weeknd', cover: 'https://via.placeholder.com/350x350' },
-      { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', title: 'Levitating', artist: 'Dua Lipa', cover: 'https://via.placeholder.com/350x350' },
-    ];
+    const playlist = {!! json_encode($formattedPlaylist) !!}
+
+    // const playlist = [
+    //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', title: 'Circles', artist: 'Post Malone', cover: 'https://storage.googleapis.com/a1aa/image/7MKrezHNp2WTZKyQAhzuj1iEJFMF2myLYPgNe1opOHM3aiAUA.jpg' },
+    //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', title: 'Blinding Lights', artist: 'The Weeknd', cover: 'https://via.placeholder.com/350x350' },
+    //   { url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', title: 'Levitating', artist: 'Dua Lipa', cover: 'https://via.placeholder.com/350x350' },
+    // ];
 
     let currentTrackIndex = 0;
     let isShuffling = false;
