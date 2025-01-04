@@ -290,17 +290,17 @@
       const secs = Math.floor(seconds % 60);
       return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
     }
-
+//FIFO
     function nextTrack() {
       currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
       loadTrack(currentTrackIndex);
     }
-
+//LIFO
     function prevTrack() {
       currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
       loadTrack(currentTrackIndex);
     }
-
+//Random
     function toggleShuffle() {
       isShuffling = !isShuffling;
       shuffleBtn.classList.toggle('active', isShuffling);
@@ -363,7 +363,7 @@
       audioPlayer.currentTime = seekTime;
     });
 
-    loadTrack(currentTrackIndex); // Load first track
+    loadTrack(currentTrackIndex); // Load first track FIFO
 
     function lifo() {
       playlist.sort((a, b) => {

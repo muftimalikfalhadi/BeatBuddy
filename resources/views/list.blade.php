@@ -175,6 +175,7 @@
             //dd($lagu);
             $i=0;
         ?>
+        <!-- menampilkan playlist artis yg dipilih -->
      @foreach ($lagu as $key => $value)
      <tr>
         <?php $i++;?>
@@ -186,10 +187,11 @@
         <img alt="Song Image" height="40" src="{{$value['img']}}" width="40"/>
        </td>
        <td>
+        <!-- memutar palylist lagu dari artis yg dipilih -->
         <a href="/player?playlist=<?= implode(',', $playlist) ?>" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
        </td>
        <td>
-        <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a>
+        <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a> 
        </td>
        <td>
         <!-- <svg class="love-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="toggleLike(this)"> -->

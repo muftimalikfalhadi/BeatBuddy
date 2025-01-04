@@ -386,6 +386,7 @@
                     </thead>
                     <tbody>
                     <?php
+                    //menampilkan list lagu sebanyak 4 item secara random
                     $arraySlice = $data['lagu'];
                     shuffle ($arraySlice);
                     $arraySlice = array_slice($arraySlice, 0, 4);
@@ -461,10 +462,10 @@
         </div>
         <div class="top-albums">
             <h3>Top Artists</h3>
-            
+            <!-- menampilkan urutan artis teratas -->
             <div class="albums">
                 @foreach ($data['artis'] as $key => $value)
-                    <a href="/list/{{$value['id_artis']}}" class="album">
+                    <a href="/list/{{$value['id_artis']}}" class="album"> <!--memanggil semua lagu dari artis tsb -->
                     <!-- <img src="https://storage.googleapis.com/a1aa/image/Esv8crHmjE5sAJmdmWfpIU6l2tifhKC4fjtVRXNkVSUxGcfPB.jpg" alt="Adele 21 Album Cover"> -->
                     <img src={{$value['img']}} alt="Adele 21 Album Cover">
                     
