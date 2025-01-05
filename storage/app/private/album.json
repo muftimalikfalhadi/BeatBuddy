@@ -1,0 +1,316 @@
+{
+    "album": [
+        {
+            "id_album": 1,
+            "nama_album": "Fearless",
+            "id_artis": 1
+        },
+        {
+            "id_album": 2,
+            "nama_album": "Adele 21",
+            "id_artis": 2
+        },
+        {
+            "id_album": 3,
+            "nama_album": "Scorpion",
+            "id_artis": 3
+        },
+        {
+            "id_album": 4,
+            "nama_album": "Harry's House",
+            "id_artis": 4
+        },
+        {
+            "id_album": 5,
+            "nama_album": "Born To Die",
+            "id_artis": 5
+        },
+        {
+            "id_album": 6,
+            "nama_album": "After Hours",
+            "id_artis": 6
+        }
+    ],
+
+    "lagu": [
+        {
+            "id_lagu": 1,
+            "nama_lagu": "Love Story",
+            "id_artis": 1,
+            "time": "3:55",
+            "top": 1,
+            "albums": "Fearless",
+            "img": "https://drive.cimahikota.go.id/s/cZzrCB4XoWNWZQJ/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/QGgyaYbcGfDp3DA/download"
+        },
+        {
+            "id_lagu": 2,
+            "nama_lagu": "You Belong With Me",
+            "id_artis": 1,
+            "time": "3:51",
+            "top": 2,
+            "albums": "Fearless",
+            "img": "https://drive.cimahikota.go.id/s/FzGEeiyyXtYQW3D/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/F45RXr4ZZgkLHw6/download"
+        },
+        {
+            "id_lagu": 3,
+            "nama_lagu": "All Too Well",
+            "id_artis": 1,
+            "time": "5:29",
+            "top": 3,
+            "albums": "Fearless",
+            "img": "https://drive.cimahikota.go.id/s/GAosRW7oEaQE7pT/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/4J7jDZ2PSaSfQJF/download"
+        },
+        {
+            "id_lagu": 4,
+            "nama_lagu": "Shake It Off",
+            "id_artis": 1,
+            "time": "3:39",
+            "top": 4,
+            "albums": "Fearless",
+            "img": "https://drive.cimahikota.go.id/s/Mi9ZzLLAnEoxm9e/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/4CYTn4YSHKeCnF2/download"
+        },
+        {
+            "id_lagu": 5,
+            "nama_lagu": "Rolling In The Deep",
+            "id_artis": 2,
+            "time": "3:48",
+            "top": 1,
+            "albums":"Adele 21",
+            "img": "https://drive.cimahikota.go.id/s/ZKBHrNaTXonXzKD/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/Ziowsrcg7X7AKZa/download"
+        },
+        {
+            "id_lagu": 6,
+            "nama_lagu": "Someone Like You",
+            "id_artis": 2,
+            "time": "4:45",
+            "top": 2,
+            "albums":"Adele 21",
+            "img": "https://drive.cimahikota.go.id/s/wgTNFLwgXqLNR37/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/LTwsZoiPbcrj3WS/download"
+        },
+        {
+            "id_lagu": 7,
+            "nama_lagu": "Hello",
+            "id_artis": 2,
+            "time": "4:55",
+            "top": 3,
+            "albums":"Adele 21",
+            "img": "https://drive.cimahikota.go.id/s/PQa5kPSF9CkSLYs/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/nsTswGDwgCgaTD4/download"
+        },
+        {
+            "id_lagu": 8,
+            "nama_lagu": "Set Fire To The Rain",
+            "id_artis": 2,
+            "time": "4:02",
+            "top": 4,
+            "albums": "Adele 21",
+            "img": "https://drive.cimahikota.go.id/s/zxwzYDHD7WyBHry/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/2EbZHNbJmtq4XXF/download"
+        },
+        {
+            "id_lagu": 9,
+            "nama_lagu": "Hotline Bling",
+            "id_artis": 3,
+            "time": "4:27",
+            "top": 1,
+            "albums": "Scorpion",
+            "img": "https://drive.cimahikota.go.id/s/fPsCFSqpFXjEWcr/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/CyQA8G4AwL9A3yw/download"
+        },
+        {
+            "id_lagu": 10,
+            "nama_lagu": "God's Plan",
+            "id_artis": 3,
+            "time": "3:19",
+            "top": 2,
+            "albums": "Scorpion",
+            "img": "https://drive.cimahikota.go.id/s/cgCn5w5Hxnt26SN/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/cWySY3rH5n9RYEM/download"
+        },
+        {
+            "id_lagu": 11,
+            "nama_lagu": "In My Feelings",
+            "id_artis": 3,
+            "time": "3:38",
+            "top": 3,
+            "albums": "Scorpion",
+            "img": "https://drive.cimahikota.go.id/s/dYcdxNbnX99Hctm/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/yAs6KB54m9MPc5M/download"
+        },
+        {
+            "id_lagu": 12,
+            "nama_lagu": "Started From The Bottom",
+            "id_artis": 3,
+            "time": "2:53",
+            "top": 4,
+            "albums": "Scorpion",
+            "img": "https://drive.cimahikota.go.id/s/HocGJLbMfGNFrob/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/NDTcSXFaY7JNFNm/download"
+        },
+        {
+            "id_lagu": 13,
+            "nama_lagu": "Watermelon Sugar",
+            "id_artis": 4,
+            "time": "2:54",
+            "top": 1,
+            "albums": "Harry's House",
+            "img": "https://drive.cimahikota.go.id/s/KAejwzpNNys6tB2/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/YGn5KjxNtJskmPW/download"
+        },
+        {
+            "id_lagu": 14,
+            "nama_lagu": "Adore You",
+            "id_artis": 4,
+            "time": "3:27",
+            "top": 2,
+            "albums": "Harry's House",
+            "img": "https://drive.cimahikota.go.id/s/8ZfQ4BBY4BPyGkX/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/H3EFKQzWKjxi95L/download"
+        },
+        {
+            "id_lagu": 15,
+            "nama_lagu": "Sign of the Times",
+            "id_artis": 4,
+            "time": "5:40",
+            "top": 3,
+            "albums": "Harry's House",
+            "img": "https://drive.cimahikota.go.id/s/22zFBwSQt7AQ7EX/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/pi5KfDWHjyTHjF9/download"
+        },
+        {
+            "id_lagu": 16,
+            "nama_lagu": "Golden",
+            "id_artis": 4,
+            "time": "3:28",
+            "top": 4,
+            "albums": "Harry's House",
+            "img": "https://drive.cimahikota.go.id/s/NN2coGj74k5gPPJ/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/jwBnMYdgxaESosZ/download"
+        },
+        {
+            "id_lagu": 17,
+            "nama_lagu": "Summertime Sadness",
+            "id_artis": 5,
+            "time": "4:25",
+            "top": 1,
+            "albums": "Born To Die",
+            "img": "https://drive.cimahikota.go.id/s/8qwnyLTXd66JjRH/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/aB4ckoALSyWdmp4/download"
+        },
+        {
+            "id_lagu": 18,
+            "nama_lagu": "Born To Die",
+            "id_artis": 5,
+            "time": "4:45",
+            "top": 2,
+            "albums": "Born To Die",
+            "img": "https://drive.cimahikota.go.id/s/5ZX5FCsBNZcwrqB/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/8zbiq4ERSF26qKG/download"
+        },
+        {
+            "id_lagu": 19,
+            "nama_lagu": "Young and Beautiful",
+            "id_artis": 5,
+            "time": "3:55",
+            "top": 3,
+            "albums": "Born To Die",
+            "img": "https://drive.cimahikota.go.id/s/ss2nFZf5AJxxGH2/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/29kq94oApPTzKNR/download"
+        },
+        {
+            "id_lagu": 20,
+            "nama_lagu": "Video Games",
+            "id_artis": 5,
+            "time": "5:21",
+            "top": 4,
+            "albums": "Born To Die",
+            "img": "https://drive.cimahikota.go.id/s/48oGb4ziAe5jcqW/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/eL2DTZzkFFwC9RK/download"
+        },
+        {
+            "id_lagu": 21,
+            "nama_lagu": "Blinding Lights",
+            "id_artis": 6,
+            "time": "3:22",
+            "top": 1,
+            "albums": "After Hours",
+            "img": "https://drive.cimahikota.go.id/s/tn8sdj95XDoXdsw/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/iCB5DgdC2BpwBX3/download"
+        },
+        {
+            "id_lagu": 22,
+            "nama_lagu": "Save Your Tears",
+            "id_artis": 6,
+            "time": "3:35",
+            "top": 2,
+            "albums": "After Hours",
+            "img": "https://drive.cimahikota.go.id/s/qtiLiD4qSHTpWk4/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/LT763NzfPSHD4H7/download"
+        },
+        {
+            "id_lagu": 23,
+            "nama_lagu": "The Hills",
+            "id_artis": 6,
+            "time": "4:02",
+            "top": 3,
+            "albums": "After Hours",
+            "img": "https://drive.cimahikota.go.id/s/emYFgL3eF9BDN68/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/dFL8d8fKptS6jSE/download"
+        },
+        {
+            "id_lagu": 24,
+            "nama_lagu": "Starboy",
+            "id_artis": 6,
+            "time": "3:50",
+            "top": 4,
+            "albums": "After Hours",
+            "img": "https://drive.cimahikota.go.id/s/iCAd289DCPpPq6k/download",
+            "url_lagu": "https://drive.cimahikota.go.id/s/CWc3H87XgSFM4kZ/download"
+        }
+    ],
+
+    "artis": [
+        {
+            "id_artis": 1,
+            "nama_artis": "Taylor Swift",
+            "top": 1,
+            "img": "https://drive.cimahikota.go.id/s/AeE6rFY6w55L2NC/download"
+        },
+        {
+            "id_artis": 2,
+            "nama_artis": "Adele",
+            "top": 2,
+            "img": "https://drive.cimahikota.go.id/s/Dm8DZgMDSMfE8mo/download"
+        },
+        {
+            "id_artis": 3,
+            "nama_artis": "Drake",
+            "top": 3,
+            "img": "https://drive.cimahikota.go.id/s/3KmsZSAE7AZqTeq/download"
+        },
+        {
+            "id_artis": 4,
+            "nama_artis": "Harry Styles",
+            "top": 4,
+            "img": "https://drive.cimahikota.go.id/s/7eCCXzzcDN8ktGt/download"
+        },
+        {
+            "id_artis": 5,
+            "nama_artis": "Lana Del Rey",
+            "top": 5,
+            "img": "https://drive.cimahikota.go.id/s/SrXjPAdtf4RdyJt/download"
+        },
+        {
+            "id_artis": 6,
+            "nama_artis": "The Weeknd",
+            "top": 6,
+            "img": "https://drive.cimahikota.go.id/s/WoToqHFJ7mfy4PW/download"
+        }
+    ]
+}
