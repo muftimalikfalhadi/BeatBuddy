@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,84 +7,62 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
   <style>
-    body {
+    /* body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
       color: white;
-      display: flex;
+      display: flex; 
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
-    }
-    .navbar {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 50px;
-    }
-    .navbar .top-section {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar .logo-section {
-      display: flex;
-      align-items: center;
-      margin-left: 52px;
-    }
-    .navbar img {
-      height: 50px;
-    }
-    .navbar .logo-text {
-      margin-left: 10px;
-      font-size: 24px;
-      font-weight: 700;
-      color: #00b4d8;
-    }
-    .navbar .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-    .navbar .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .navbar .search-bar {
-      width: 100%;
-      max-width: 600px;
-      margin-top: 20px;
-      position: relative;
-      margin-right: 83px;
-    }
-    .navbar .search-bar input {
-      width: 100%;
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-      box-sizing: border-box;
-      padding-left: 40px;
-    }
-    .navbar .search-bar i {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-      color: #888;
-    }
+      
+    } */
+    body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            /* color: white; */
+            /* display: flex; */
+        } 
+    .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header .logo-text {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
     .player-container {
       text-align: center;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       padding: 30px;
-      width: 85%;
-      max-width: 900px;
+      width: 100%%;
+      max-width: 2900px;
       margin-top: 20px;
     }
     .player-container img {
@@ -159,36 +137,38 @@
     .keluar a:hover {
       background: #0077a3;
     }
+
+    #shuffle #repeat #next #prev {
+      cursor: pointer; /* Menunjukkan bahwa ikon dapat diklik */
+      transition: color 0.3s ease; /* Transisi warna halus */
+    } 
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="top-section">
-      <div class="logo-section">
-        <img alt="BeatBuddy Logo" height="50" src="https://drive.cimahikota.go.id/s/S55zfPXtcPmiB6X/download" width="100"/>
-        <div class="logo-text">BeatBuddy</div>
-      </div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/nextup">Next Up</a>
-        <a href="/music">Music</a>
-      </div>
+<div class="container">
+   <div class="header">
+    <div class="logo">
+     <img alt="Logo" height="50" src="https://drive.cimahikota.go.id/s/S55zfPXtcPmiB6X/download" width="150"/>
+     <div class="logo-text">
+      BeatBuddy
+     </div>
     </div>
-    <div class="search-bar">
-      <i class="fas fa-search"></i>
-      <input placeholder="Search For Musics, Artists, ..." type="text"/>
-    </div>
-    <!-- <div class="nav-links">
-      <input type="button" onclick="fifo()" value="FIFO">
-      <input type="button" onclick="lifo()" value="LIFO">
-    </div> -->
-  </div>
+    <nav>
+     <a href="/">
+      Home
+     </a>
+     
+     <a href="/music">
+      Music
+     </a>
+    </nav>
+   </div>
 
   <!-- Audio element -->
   <audio id="audioPlayer" preload="auto"></audio>
 
   <div class="player-container">
-    <img alt="Album cover" id="albumCover" height="350" width="350"/>
+    <img alt="Song cover" id="albumCover" height="350" width="350"/>
     <div class="song-info">
       <h2 id="songTitle">Circles</h2>
       <p id="songArtist">Post Malone</p>
@@ -208,7 +188,7 @@
       <i class="fas fa-arrow-right" id="forward"></i>
       <i class="fas fa-arrow-left" id="reverse"></i>
       <i class="fas fa-random" id="shuffle"></i>
-      <i class="fas fa-plus" id="add"></i>
+      <!-- <i class="fas fa-plus" id="add"></i> -->
     </div>
   </div>
   <div class="keluar">
@@ -218,6 +198,7 @@
   <script>
     // Playlist array
     var playlist = {!! json_encode($formattedPlaylist) !!}
+    //var playlist = {!! json_encode($formattedPlaylist) !!}
     var originalPlaylist = [...playlist]
 
     // playlist.sort((a, b) => {
@@ -244,9 +225,13 @@
     //   console.log(playlist)
     // }
 
-    let currentTrackIndex = 0;
+    let currentTrackIndex = {!! $trackIndex !!};
+    //con (currentTrackindex);
+    
     let isShuffling = false;
     let isRepeating = false;
+    let isFifoing = false;
+    let isLifoing = false;
 
     const audioPlayer = document.getElementById('audioPlayer');
     const playPauseBtn = document.getElementById('playPause');
@@ -272,7 +257,8 @@
       albumCover.src = track.cover;
       audioPlayer.load();
       audioPlayer.play();
-      playPauseBtn.classList.replace('fa-play', 'fa-pause');
+      
+      playPauseBtn.classList.replace('fa-play');
     }
 
     function updateProgress() {
@@ -300,15 +286,65 @@
       currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
       loadTrack(currentTrackIndex);
     }
+
+    //Automatic Fifo
+    function toggleForward() {
+      isFifoing = !isFifoing;
+      forwardBtn.classList.toggle('active', isFifoing);
+      // Mengubah warna tombol berdasarkan status shuffle
+      if (isFifoing) {
+        forwardBtn.style.color = '#00b4d8';//lightblue';  // Ganti warna tombol menjadi hijau
+        reverseBtn.style.color = 'white';
+        isLifoing = false;
+        isShuffling = false;
+        shuffleBtn.style.color = 'white';
+      } else {
+        forwardBtn.style.color = 'white';   
+      }
+    }
+    //Automatic Lifo
+    function toggleReverse() {
+      isLifoing = !isLifoing;
+      reverseBtn.classList.toggle('active', isLifoing);
+      // Mengubah warna tombol berdasarkan status shuffle
+      if (isLifoing) {
+        reverseBtn.style.color = '#00b4d8';//lightblue';  // Ganti warna tombol menjadi hijau
+        forwardBtn.style.color = 'white';
+        isFifoing = false;
+        isShuffling = false;
+        shuffleBtn.style.color = 'white';
+      } else {
+        reverseBtn.style.color = 'white';  
+      }
+    }
+
 //Random
     function toggleShuffle() {
       isShuffling = !isShuffling;
       shuffleBtn.classList.toggle('active', isShuffling);
+      // Mengubah warna tombol berdasarkan status shuffle
+      if (isShuffling) {
+          shuffleBtn.style.color = '#00b4d8';//lightblue';  // Ganti warna tombol menjadi hijau
+          isRepeating = false;
+          repeatBtn.style.color = 'white';
+          isFifoing = false;
+          forwardBtn.style.color = 'white';
+          isLifoing = false;
+          reverseBtn.style.color = 'white';
+      } else {
+          shuffleBtn.style.color = 'white';    // Ganti warna tombol menjadi merah
+          
+      }
     }
 
     function toggleRepeat() {
       isRepeating = !isRepeating;
       repeatBtn.classList.toggle('active', isRepeating);
+      if (isRepeating) {
+          repeatBtn.style.color = '#00b4d8';//lightblue';  // Ganti warna tombol menjadi hijau
+      } else {
+          repeatBtn.style.color = 'white';    // Ganti warna tombol menjadi merah
+      }
     }
 
     function playPause() {
@@ -325,24 +361,12 @@
     playPauseBtn.addEventListener('click', playPause);
     nextBtn.addEventListener('click', nextTrack);
     prevBtn.addEventListener('click', prevTrack);
+    reverseBtn.addEventListener('click', toggleReverse);
+    forwardBtn.addEventListener('click', toggleForward);
     shuffleBtn.addEventListener('click', toggleShuffle);
     repeatBtn.addEventListener('click', toggleRepeat);
-    reverseBtn.addEventListener('click', function() {
-      playlist.sort((a, b) => {
-        if (a.title < b.title) return 1;
-        if (a.title > b.title) return -1;
-        return 0;
-      });
-
-      loadTrack(currentTrackIndex);
-    });
-
-    forwardBtn.addEventListener('click', function() {
-      playlist = [...originalPlaylist]
-      loadTrack(currentTrackIndex);
-    });
-
     audioPlayer.addEventListener('timeupdate', updateProgress);
+   
     audioPlayer.addEventListener('ended', () => {
       if (isRepeating) {
         audioPlayer.currentTime = 0;
@@ -350,9 +374,18 @@
       } else if (isShuffling) {
         currentTrackIndex = Math.floor(Math.random() * playlist.length);
         loadTrack(currentTrackIndex);
-      } else {
+      } else if (isFifoing) {
         nextTrack();
-      }
+      } else if (isLifoing) {
+        prevTrack();
+      } 
+    });
+
+    audioPlayer.addEventListener('play', function() {
+      playPauseBtn.classList.replace('fa-play', 'fa-pause');
+    });
+    audioPlayer.addEventListener('pause', function() {
+      playPauseBtn.classList.replace('fa-pause', 'fa-play');
     });
 
     progressBar.addEventListener('click', function(e) {
@@ -362,16 +395,8 @@
       const seekTime = (clickX / progressBarWidth) * duration;
       audioPlayer.currentTime = seekTime;
     });
-
+    
     loadTrack(currentTrackIndex); // Load first track FIFO
-
-    function lifo() {
-      playlist.sort((a, b) => {
-        if (a.title < b.title) return 1;
-        if (a.title > b.title) return -1;
-        return 0;
-      });
-    }
   </script>
 </body>
 </html>

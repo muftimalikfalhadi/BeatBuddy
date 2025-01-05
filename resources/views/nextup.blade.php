@@ -136,9 +136,9 @@
      </a>
     </nav>
    </div>
-   <div class="search-bar">
+   <!-- <div class="search-bar">
     <input placeholder="Search for songs, artists, albums..." type="text"/>
-   </div>
+   </div> -->
    <div class="playlist">
     <h2>
      Next Up
@@ -160,8 +160,8 @@
        <th>
         Time
        </th>
-       <th>
-       </th>
+       <!-- <th>
+       </th> -->
       </tr>
      </thead>
      <tbody>
@@ -172,34 +172,34 @@
 
         ?>
         @if ($array_lagu)
+         @foreach ($playlist as $p)    
             @foreach ($array_lagu as $key => $value)
-            @foreach ($playlist as $p)
             @if ($p == $value['id_lagu'])
       <tr>
         <?php $i++;?>
        <td>
-        <?php echo ($i.'-'.$value['id_lagu']);?>
+        <?php echo ($i);?>
        </td>
        <td>
         <!-- <img alt="Song Image" height="40" src="https://storage.googleapis.com/a1aa/image/XWdz8RbvRdqGEpZ6TlJpb593eKDUifrJzlWff0ihPX4JYU9PB.jpg" width="40"/> -->
         <img alt="Song Image" height="40" src="{{$value['img']}}" width="40"/>
        </td>
        <td>
-        <a href="/player?playlist=<?= implode(',', $playlist) ?>" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
+        <a href="/player?playlist=<?= implode(',', $playlist) ?>&trackIndex=<?=$i-1;?>" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
        </td>
        <td>
         <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a>
        </td>
        <td>
         <!-- <svg class="love-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="toggleLike(this)"> -->
-        <svg class="love-icon"  viewBox="0 0 24 24">
-          <!-- <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/> -->
-        </svg>
+        <!-- <svg class="love-icon"  viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg> -->
         {{$value['time']}}
        </td>
-       <td>
-        <i class="fas fa-ellipsis-h"></i>
-       </td>
+       <!-- <td>
+        <i class="fas fa-ellipsis-h"></i> 
+       </td>  -->
       </tr>
 
       @endif

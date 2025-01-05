@@ -276,7 +276,7 @@
             color: #00d1b2;
         }
 
-        /* View All Section */
+        
         .view-all {
             display: flex;
             align-items: center;
@@ -359,13 +359,11 @@
             </div>
             <nav class="nav">
                 <a href="/">Home</a>
-                <!-- <a href="/nextup">Next Up</a> -->
+               
                 <a href="/music">Music</a>
             </nav>
         </header>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for Music, Artists...">
-        </div>
+        
         <div class="main-content">
             <div class="welcome-section">
                 <div class="background-image"></div>
@@ -390,18 +388,21 @@
                     $arraySlice = $data['lagu'];
                     shuffle ($arraySlice);
                     $arraySlice = array_slice($arraySlice, 0, 4);
-                    //echo $arraySlice;
+                    
                     ?>
+                    
                     @foreach ($arraySlice as $key => $value)
-                        
+                       
 
                         <tr>
                             <td>
                                 <div class="song-info">
-                                    <!-- <img src="https://storage.googleapis.com/a1aa/image/RqJ9DxlIYKopNxfMyxwHlkJxmuH6Zs0ZdFGfCupW0TeOkcfPB.jpg" alt="Song Thumbnail"> -->
+                                   
                                     <img src="{{$value['img']}}" alt="Song Thumbnail"> 
                                     <div>
-                                        <div class="song-title">{{$value['nama_lagu']}}</div>
+                                    <a href="/player?playlist={{$value['id_lagu']}}&trackIndex=0">
+                                        <div class="song-title"> {{$value['nama_lagu']}}</div>
+                                    </a>
                                         @foreach ($data['artis'] as $key => $value_artis) 
                                             @if (($value_artis['id_artis'] === $value['id_artis'])) 
                                                 <div class="song-album">{{$value_artis['nama_artis']}}</div>
@@ -412,104 +413,27 @@
                                 </div>
                             </td>
                             <td>{{$value['albums']}}</td>
-                            <td><i class="fas fa-heart"></i> {{$value['time']}}</td>
-                        </tr>
-
+                            <td><i></i> {{$value['time']}}</td>
+                        </tr>                 
                     @endforeach
-                        
-                        <!-- <tr>
-                            <td>
-                                <div class="song-info">
-                                    <img src="https://storage.googleapis.com/a1aa/image/RqJ9DxlIYKopNxfMyxwHlkJxmuH6Zs0ZdFGfCupW0TeOkcfPB.jpg" alt="Song Thumbnail">
-                                    <div>
-                                        <div class="song-title">Sorforoe</div>
-                                        <div class="song-album">The New Sound</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>The New Sound</td>
-                            <td><i class="fas fa-heart"></i> 3:26</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="song-info">
-                                    <img src="https://storage.googleapis.com/a1aa/image/RqJ9DxlIYKopNxfMyxwHlkJxmuH6Zs0ZdFGfCupW0TeOkcfPB.jpg" alt="Song Thumbnail">
-                                    <div>
-                                        <div class="song-title">Sorforoe</div>
-                                        <div class="song-album">The New Sound</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>The New Sound</td>
-                            <td><i class="fas fa-heart"></i> 3:26</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="song-info">
-                                    <img src="https://storage.googleapis.com/a1aa/image/RqJ9DxlIYKopNxfMyxwHlkJxmuH6Zs0ZdFGfCupW0TeOkcfPB.jpg" alt="Song Thumbnail">
-                                    <div>
-                                        <div class="song-title">Sorforoe</div>
-                                        <div class="song-album">The New Sound</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>The New Sound</td>
-                            <td><i class="fas fa-heart"></i> 3:26</td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
+        
         <div class="top-albums">
             <h3>Top Artists</h3>
             <!-- menampilkan urutan artis teratas -->
             <div class="albums">
-                @foreach ($data['artis'] as $key => $value)
-                    <a href="/list/{{$value['id_artis']}}" class="album"> <!--memanggil semua lagu dari artis tsb -->
-                    <!-- <img src="https://storage.googleapis.com/a1aa/image/Esv8crHmjE5sAJmdmWfpIU6l2tifhKC4fjtVRXNkVSUxGcfPB.jpg" alt="Adele 21 Album Cover"> -->
-                    <img src={{$value['img']}} alt="Adele 21 Album Cover">
-                    
-                    <!--<p>Top {{$value['top']}}</p>-->
-                    <p>{{$value['nama_artis']}}</p>
+                @foreach ($data['artis'] as $key => $val)
+                    <a href="/list/{{$val['id_artis']}}" class="album">
+                        <img src="{{$val['img']}}">
+                        <p>{{$val['nama_artis']}}</p>
+                    </a>
                 @endforeach
-
-                <!-- <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/Esv8crHmjE5sAJmdmWfpIU6l2tifhKC4fjtVRXNkVSUxGcfPB.jpg" alt="Adele 21 Album Cover">
-                    <p>Adele 21</p>
-                    <p>{{$value['nama_artis']}}</p>
-                </a>
-                
-                <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/h8c48zrJ6ULfOazLxy2nozCBoQHUb4ZYpuzGbrOXzjCtB3fTA.jpg" alt="Scorpion Album Cover">
-                    <p>Scorpion</p>
-                    <p>Drake</p>
-                </a>
-                <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/IB244meXLr01ZazkzdUBqRzgeKgJlRbT1jlS8r6A4hjXDufnA.jpg" alt="Harry's House Album Cover">
-                    <p>Harry's House</p>
-                    <p>Harry Styles</p>
-                </a>
-                <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/B5Ig2FY7H34QPl1F7lkKlMq5wn7Wrw92CklpF0oEORu3g7fJA.jpg" alt="Born To Die Album Cover">
-                    <p>Born To Die</p>
-                    <p>Lana Del Rey</p>
-                </a>
-                <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/2fWg3KR81z2xRyhy7veWlzBeFxeafJALSgeXheec6BNsfGcfPB.jpg" alt="All Quite On The Western Front Album Cover">
-                    <p>All Quite On The..</p>
-                    <p>The Libertines</p>
-                </a>
-                <a href="#" class="album">
-                    <img src="https://storage.googleapis.com/a1aa/image/iKGg7YNqRBb9G5NZW8YyZYIgBeZuMC9NEw8IGxNJ4fGTDufnA.jpg" alt="Beauty Behind the Madness Album Cover">
-                    <p>Beauty Behind the Madness</p>
-                    <p>The Weeknd</p>
-                </a> -->
+               
             </div>
-            <!--
-            <div class="view-all">
-                <a href="#">View All <i class="fas fa-plus"></i></a>
-            </div>
-    -->
+             
         </div>
     </div>
 </body>

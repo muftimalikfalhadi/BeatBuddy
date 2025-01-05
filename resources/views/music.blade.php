@@ -131,9 +131,9 @@
      </a>
     </nav>
    </div>
-   <div class="search-bar">
+   <!-- <div class="search-bar">
     <input placeholder="Search for songs, artists, albums..." type="text"/>
-   </div>
+   </div> -->
    <div class="playlist">
     <h2>
      All Music
@@ -155,8 +155,7 @@
        <th>
         Time
        </th>
-       <th>
-       </th>
+      
       </tr>
      </thead>
      <tbody>
@@ -179,7 +178,7 @@
         <img alt="Song Image" height="40" src="{{$value['img']}}" width="40"/>
        </td>
        <td>
-        <a href="#" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
+        <a href="/player?playlist={{$value['id_lagu']}}&trackIndex=0" style="color: #fff; text-decoration: none;">{{$value['nama_lagu']}}</a>
        </td>
        <td>
         <a href="#" style="color: #fff; text-decoration: none;">{{$value['albums']}}</a>
@@ -189,9 +188,6 @@
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
         </svg>
         {{$value['time']}}
-       </td>
-       <td>
-        <i class="fas fa-ellipsis-h"></i>
        </td>
       </tr>
       @endforeach
