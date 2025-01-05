@@ -87,7 +87,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 10px;
-      gap: 80px;
+      gap: 90px;
     }
     .player-container .controls i {
       font-size: 28px;
