@@ -267,7 +267,7 @@
       const progressPercent = (currentTime / duration) * 100;
       progressFilled.style.width = `${progressPercent}%`;
 
-      currentTimeElem.textContent = formatTime(currentTime);
+      isset(currentTime)? currentTimeElem.textContent = formatTime(currentTime):'';
       durationElem.textContent = formatTime(duration);
     }
 
