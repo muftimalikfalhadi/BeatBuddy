@@ -266,9 +266,13 @@
       const duration = audioPlayer.duration;
       const progressPercent = (currentTime / duration) * 100;
       progressFilled.style.width = `${progressPercent}%`;
-
-      isset(currentTime)? currentTimeElem.textContent = formatTime(currentTime):'';
-      durationElem.textContent = formatTime(duration);
+      currentTimeElem.textContent = formatTime(currentTime);
+    
+      if (!isNaN(duration)) {
+        durationElem.textContent = formatTime(duration);
+      } else {
+        durationElem.textContent = '';
+      }
     }
 
     function formatTime(seconds) {
